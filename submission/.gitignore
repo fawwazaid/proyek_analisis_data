@@ -20,9 +20,9 @@ env/
 *.log
 
 # --- Data files ---
-data/
-datasets/
-*.csv
+# data/
+# datasets/
+# *.csv
 *.zip
 *.json
 *.xlsx
