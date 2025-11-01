@@ -20,12 +20,9 @@ env/
 *.log
 
 # --- Data files ---
-!dashboard/all_data.csv
-!dashboard/
-!dashboard/**
 data/
 datasets/
-*.csv
+# *.csv
 *.zip
 *.json
 *.xlsx
