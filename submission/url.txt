@@ -1,1 +1,1 @@
-[Bike Sharing Dashboard](https://fuw2zcdut3i7jswyoappajf.streamlit.app/)
+https://fuw2zcdut3i7jswyoappajf.streamlit.app/
