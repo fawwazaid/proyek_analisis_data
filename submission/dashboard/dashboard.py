@@ -6,10 +6,24 @@ from babel.numbers import format_currency
 
 sns.set(style='darkgrid')
 
-# Load dataset
-df_day = pd.read_csv("submission/data/archive/day.csv")
-df_hour = pd.read_csv("submission/data/archive/hour.csv")
+# Load df_day
+try:
+    df_day = pd.read_csv("submission/data/archive/day.csv")
+except FileNotFoundError:
+    try:
+        df_day = pd.read_csv("data/archive/day.csv")
+    except FileNotFoundError:
+        raise FileNotFoundError("df_day.csv not found in either path!")
 
+# Load df_hour
+try:
+    df_hour = pd.read_csv("submission/data/archive/hour.csv")
+except FileNotFoundError:
+    try:
+        df_hour = pd.read_csv("data/archive/hour.csv")
+    except FileNotFoundError:
+        raise FileNotFoundError("df_hour.csv not found in either path!")
+    
 # Convert columns
 df_day['dteday'] = pd.to_datetime(df_day['dteday'])
 df_hour['dteday'] = pd.to_datetime(df_hour['dteday'])
